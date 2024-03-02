@@ -6,11 +6,11 @@ function navigate() {
   if (!url.startsWith("http")) {
     url = "http://" + url;
   }
-  history.push(url); // Add new URL to history
-  currentIdx = history.length - 1; // Update current position
+  history.push(url);
+  currentIdx = history.length - 1;
   const iframe = document.getElementById("content");
   iframe.src = url;
-  document.getElementById("url").value = url; // Update URL input with current URL
+  document.getElementById("url").value = url;
 }
 
 function goBack() {
@@ -31,4 +31,10 @@ function goForward() {
     iframe.src = url;
     document.getElementById("url").value = url;
   }
+}
+
+function refreshPage() {
+  const iframe = document.getElementById("content");
+  const url = iframe.src;
+  iframe.src = url;
 }
