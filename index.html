@@ -6,16 +6,16 @@
     <title>dogeBrowser</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
+ <body>
     <div id="navigation">
         <input type="text" id="url" placeholder="Enter URL">
         <button onclick="navigate()">Go</button>
         <button onclick="goBack()"><</button>
         <button onclick="goForward()">></button>
+        <button onclick="refreshPage()">Reload</button>
     </div>
     <br>
-    <iframe id="content" sandbox="allow-scripts allow-same-origin"></iframe>
+    <iframe id="content" sandbox="allow-scripts"></iframe>
     <script src="script.js"></script>
 </body>
 </html>
